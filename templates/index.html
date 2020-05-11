@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Gold: </h2>
-
+    <h2>Gold: {{session['gold']}}</h2> 
     {% for job in jobs %}
-    <div class="job">{{ job }}</div>
+        <form action="/process_money" method='POST'>
+            <div class="job">
+                <input type="hidden" name='job' value={{ job }}>     
+                <input type="submit" action="process">       
+                {{ job }}
+            </div>
+        </form>
     {% endfor %}
+    
 </body>
 </html>
