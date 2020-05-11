@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Gold: </h2>
+
+    {% for job in jobs %}
+    <div class="job">{{ job }}</div>
+    {% endfor %}
 </body>
 </html>
